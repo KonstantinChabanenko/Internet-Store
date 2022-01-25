@@ -15,7 +15,7 @@ const Dropdown = ({ topCategory, renderDropdownItems, hidePreviousDropdown }) =>
         <CloseMenuBtn />
       </li>
       <li className="dropdown-item top-category">
-        <Link to={`/products/${topCategory.id || topCategory.categoryID}`} className="nav-link">{topCategory.name}</Link>
+        <Link to={`/products/${topCategory._id || topCategory.categoryID}`} className="nav-link">{topCategory.name}</Link>
       </li>
       {topCategory.subCategories.map((subCategory) => {
         const hasSubCategories = !!subCategory?.subCategories?.length;
