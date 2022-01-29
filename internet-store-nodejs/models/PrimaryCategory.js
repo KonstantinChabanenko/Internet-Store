@@ -6,6 +6,9 @@ const primaryCategorySchema = new mongoose.Schema({
     },
     subCategories: {
         type: Array
+    },
+    name: {
+        type: String
     }
 });
 

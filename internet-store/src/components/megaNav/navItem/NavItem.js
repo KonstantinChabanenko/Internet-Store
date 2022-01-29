@@ -27,7 +27,7 @@ const NavItem = ({ category }) => {
       className={`nav-item ${hasSubCategories ? 'dropdown' : ''} ${show ? 'show' : ''}`}
     >
       <Link
-        to={`/products/${categoryID}`}
+        to={`/categories/${categoryID}`}
         className={`nav-link ${hasSubCategories ? 'dropdown-toggle' : ''}`}
         onClick={ handleClick }
       >

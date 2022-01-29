@@ -2,7 +2,7 @@ import { useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {useLocation } from "react-router-dom";
 import { toggleMegaNav, setMegaNav } from './meganavSlice';
-import getMeganavItems from '../../api/meganav';
+import getCategories from '../../api/categories';
 import MegaNavStyled from './MegaNavStyled';
 import MegaNavContainer from './megaNavContainer/MegaNavContainer';
 import MegaNavHeader from './megaNavHeader/MegaNavHeader';
@@ -23,10 +23,10 @@ const MegaNav = () => {
 
     if (!categories.length) {
       (async () => {
-          const response = await getMeganavItems();
+          const response = await getCategories();
 
-          if (response?.data?.mainNavCategories) {
-              dispatch(setMegaNav(response.data.mainNavCategories));
+          if (response?.data?.categories) {
+              dispatch(setMegaNav(response.data.categories));
           }
       })();
     }
