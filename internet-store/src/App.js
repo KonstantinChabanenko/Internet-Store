@@ -4,8 +4,9 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Routes, Route } from 'react-router-dom';
 
 // Pages
-import Home from './pages/Home/Home';
-import Products from './pages/Products/Products';
+import Home from './pages/home/Home';
+import Products from './pages/products/Products';
+import Categories from './pages/categories/Categories';
 
 function App() {
   const theme = createTheme({
@@ -23,6 +24,7 @@ function App() {
         <StylesProvider injectFirst>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/categories/:cgid" element={<Categories />} />
             <Route path="/products/:cgid" element={<Products />} />
           </Routes>
         </StylesProvider>

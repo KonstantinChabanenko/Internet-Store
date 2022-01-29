@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const HomeRoutes = require('./routes/HomeRoutes');
 const ProductsRoutes = require('./routes/ProductsRoutes');
-const MegaNavRoutes = require('./routes/MegaNavRoutes');
+const CategoriesRoutes = require('./routes/CategoriesRoutes');
 
 const app = express();
 
@@ -36,4 +36,4 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 // routes
 app.use(HomeRoutes);
 app.use(ProductsRoutes);
-app.use(MegaNavRoutes);
+app.use(CategoriesRoutes);
