@@ -4,9 +4,6 @@ const variantSchema = new mongoose.Schema({
     _id: {
         type: String
     },
-    name: {
-        type: String
-    },
     variationAttrs: {
         type: Object
     },

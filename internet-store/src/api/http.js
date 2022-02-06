@@ -6,7 +6,7 @@ const originURL = 'http://localhost:8080';
 const getRequest = async (endpoint, urlParams) => {
     let querystring = '';
 
-    if (urlParams) {
+    if (typeof urlParams === 'object') {
         Object.keys(urlParams).forEach((param, index) => {
             if (index === 0) {
                 querystring += '?';
@@ -16,6 +16,8 @@ const getRequest = async (endpoint, urlParams) => {
     
             querystring += `${param}=${urlParams[param]}`;
         });
+    } else if (urlParams) {
+        querystring = urlParams;
     }
 
     const response = await resolve(axios.get(

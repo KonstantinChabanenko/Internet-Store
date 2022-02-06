@@ -14,7 +14,7 @@ const ProductTile = ({ product }) => {
                 product?.colors?.length && (
                     <div className="swatches">
                         {product.colors.map((color) => (
-                            <Link to={`/product/${product.id}&color=${color._id}`} key={color._id}>
+                            <Link to={`/product/${product.id}?color=${color._id}`} key={color._id}>
                                 <Swatch bgimage={color.imageURL} />
                             </Link>
                         ))}

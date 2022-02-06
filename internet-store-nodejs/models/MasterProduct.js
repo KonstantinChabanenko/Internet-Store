@@ -15,6 +15,9 @@ const masterProductSchema = new mongoose.Schema({
     },
     defaultVariant: {
         type: String
+    },
+    description: {
+        type: String
     }
 });
 
