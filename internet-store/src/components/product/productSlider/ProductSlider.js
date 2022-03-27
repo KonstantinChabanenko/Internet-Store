@@ -12,6 +12,11 @@ const ProductSlider = ({ images }) => {
             navButtonsAlwaysVisible={true}
             navButtonsProps={{ className: 'carousel-nav-btn' }}
             activeIndicatorIconButtonProps={{ className: 'active-indicator-icon' }}
+            onChange={() => {
+                window.setTimeout(() => {
+                    window.dispatchEvent(new Event('resize'));
+                }, 300);
+            }}
         >
             {
                 images.map((image, i) => (

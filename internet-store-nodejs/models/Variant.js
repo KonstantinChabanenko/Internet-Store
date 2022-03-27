@@ -15,6 +15,9 @@ const variantSchema = new mongoose.Schema({
     },
     masterID: {
         type: String
+    },
+    availabilityModel: {
+        type: Object
     }
 });
 

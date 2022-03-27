@@ -27,9 +27,10 @@ const product_get = async (req, res, next) => {
         id: master._id,
         name: master.name,
         price: variant.price,
-        images: variant.images.medium,
+        images: variant.images.large,
         description: master.description,
-        variationAttrs: {}
+        variationAttrs: {},
+        availabilityModel: variant.availabilityModel
     };
 
     if (master.variationAttrs?.colors?.length) {
@@ -49,6 +50,9 @@ const product_get = async (req, res, next) => {
 
         result.variationAttrs[attribute] = master.variationAttrs[attribute];
     });
+
+    // var t = await Variant.updateMany({}, { $set: { "availabilityModel.inStock": true, "availabilityModel.ATS": 100 }});
+    // var h = 0;
 
     res.json(result);
 };

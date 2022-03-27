@@ -4,7 +4,6 @@ import PageContent from '../../components/product/pageContent/PageContent';
 
 const Product = () => (
     <Page>
-        <h1>Product Details</h1>
         <Container>
             <PageContent />
         </Container>
