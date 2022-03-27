@@ -4,9 +4,6 @@ const variantSchema = new mongoose.Schema({
     _id: {
         type: String
     },
-    name: {
-        type: String
-    },
     variationAttrs: {
         type: Object
     },
@@ -18,6 +15,9 @@ const variantSchema = new mongoose.Schema({
     },
     masterID: {
         type: String
+    },
+    availabilityModel: {
+        type: Object
     }
 });
 
